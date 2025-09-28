@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <label for="unit-select">Select unit</label>
+            <select id="unit-select" title="Select temperature unit">
+                <option value="metric">°C</option>
+                <option value="imperial">°F</option>
+            </select>
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div id="weather-info" class="hidden">
+            <h2 id="city-name"></h2>
+            <div class="weather-main">
+                <img id="weather-icon" src="" alt="Weather icon">
+                <span id="temperature"></span>
+            </div>
+            <div id="weather-details">
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind: <span id="wind-speed"></span> m/s</p>
+                <p id="weather-description"></p>
+            </div>
+        </div>
+        
+        <div id="error-message" class="hidden">
+            <p>City not found. Please try again.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
